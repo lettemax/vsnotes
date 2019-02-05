@@ -8,3 +8,38 @@ for mapping the servlets to different addresses. configures our servlets
 
 Tomcat - server designed by Apache that will host or house our servlet Container
 
+web.xml (deployment descriptor) - gives the servlet container mapping and configuration details
+decides what requests are handled by what server
+
+servlet lifecycle - 
+1. servlet class loaded into the servlet container
+2. servlet class is instantiated
+3. servlet's init() method is called
+the init method of the servlet class is run only once and sets up initial configurations/parameters
+-lazy: init is called upon the request to a servlet
+-eager: init is called as soon as the application starts
+4. servlet service() method is called upon each request to the servlet
+service method delegates the request to doGet(), doPost(), doDelete()...
+5. servlet destroy() method is only called once and that is when the application is shutdown
+
+ServletConfig - object specific to a single servlet that holds information on that servlet
+
+ServletContext - object that holds information about the entire container and thus all servlets
+
+uri - uniform resource identifier
+identifies a file or resource/servlet
+
+url - uniform resource locator
+host + port + uri 
+
+forward - occurs on the server side and sends a request from one servlet to another
+
+redirect - a resource tells the client to send another request to a different location
+
+session handling - 
+1. httpsession object - keeps track of session server side
+2. cookie - store info client side 
+
+Do not recommend list
+3. url rewriting
+4. hidden forms
