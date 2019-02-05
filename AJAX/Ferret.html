@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Gifs!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+        <h1>Search for gifs</h1>
+        <input id="topic-input" type="text" placeholder="search anything">
+        <button id="get-gif" onclick="{getGifs();}">Search for gif</button>
+        <div id="gif-div" style="max-width:300px; max-height:300px; padding-top:10px"></div>
+        <script>
+            function getGifs(){
+
+                document.getElementById("gif-div").innerHTML = "";
+                inp = document.getElementById("topic-input");
+                sterm = inp.value; 
+
+                let xhttp = new XMLHttpRequest();
+                    xhttp.onreadystatechange = function() {
+                        
+                        if (this.readyState == 4 && this.status == 200) {
+                        
+                            let result = JSON.parse(this.response);
+                            console.log(result);
+                            console.log("sterm: "+sterm)
+        
+                            // document.getElementById("get-gif").innerHTML = "You got it!";
+                            // document.getElementById("gif-div").setAttribute("src", result.data[0].images.looping.url);
+
+                            let gif = document.createElement("IMG");
+                            gif.setAttribute("src", result.data[0].images.original.url);
+                            document.getElementById("gif-div").appendChild(gif);
+ 
+                        }
+                    };
+                
+                    xhttp.open("GET", "https://api.giphy.com/v1/gifs/search?q="+sterm+"&api_key=2SE8H77Ot8zPVnM0WRMAKWnj1SelpwxN&limit=1", true);
+                    xhttp.send(); 
+            }
+        </script>
+</body>
+</html>

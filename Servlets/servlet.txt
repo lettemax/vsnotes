@@ -1,0 +1,10 @@
+Web Server - is a computer that is designed to handle http requests. 
+
+Servlet - is a Java object designed to handle incoming requests, not solely http.
+can generate responses and process requests using Java logic
+
+Servlet Container - it contains one to many servlets and is primarily responsible
+for mapping the servlets to different addresses. configures our servlets
+
+Tomcat - server designed by Apache that will host or house our servlet Container
+

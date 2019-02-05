@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h1> Testing AJAX  </h1>
+        <button onclick = "doAJAX()">Do AJAX </button>
+        <p id= "reply"></p> 
+            <Script>
+                    function doAJAX(){
+                    // step 1
+                    let xhttp = new XMLHttpRequest();
+                        // step 2
+                        xhttp.onreadystatechange = function() {
+                            // the if here is a condition that verifies that the response
+                            // is appropriate received
+                            if (this.readyState == 4 && this.status == 200) {
+                                // step 5 the code that should execute when a response is received
+                                // is received is executed
+                                document.getElementById("reply").innerHTML = this.responseText;
+                                
+                            }
+                        };
+                        // step 3, address the url and get is the http method i want on that url
+                        // get is for receiving infmation, post for giving
+                        xhttp.open("GET", "https://api.myjson.com/bins/14cge0", true);
+                        // step 4, you actually send the letter
+                        xhttp.send(); 
+                    }
+
+                    
+                    
+                    </Script>
+        
+    </body>
+</html>

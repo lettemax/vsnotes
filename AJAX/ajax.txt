@@ -1,0 +1,27 @@
+AJAX Asynchronous JS and XML
+- used to update a webpage w/out refreshing the page
+- creates a smoother user experience
+
+- Asynchronous not run immediately
+- takes time for conditions to be met for it to execute
+
+1. Make an xmlHttpRequest
+let xhttp = new xmlHttpRequest
+
+2. To define a function to execute when the response of your xmlHttpRequest 
+
+3. Open xmlHttpRequest (you are writing the address on the letter)
+
+readystate - gives information on the status of your xmlHttpRequest
+0 - unsent
+1 - called open method but have not actually sent it
+2 - headers received we have called the sent() method 
+3 - loading, downloading the response from our xmlHttpRequest
+4 - done or complete
+
+http status codes - info about how request was handled
+100's - information
+200's - successful call
+300's - redirects
+400's - client side errors
+500's - server side errors

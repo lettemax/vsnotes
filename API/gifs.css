@@ -1,0 +1,114 @@
+#search-row {
+    margin-top: 15px;
+}
+
+#search-button {
+    float: left;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+#search-button-col {
+    float: left;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+#gifs-div {
+    padding: auto;
+    margin: auto;
+    width: 95%;
+    height: 95%;
+}
+
+.gif {
+    max-height: 260px;
+    max-width: 260px;
+    padding: 5px; 
+    margin: 5px;
+}
+
+.gif-div {
+    float: left;
+    max-height: 280px;
+    max-width: 280px;
+    padding: 5px;
+    margin: 15px;
+}
+
+p {
+    padding: auto;
+    margin: auto;
+}
+
+@media screen and (max-width: 980px) {
+    #gifs-div {
+        padding: auto;
+        margin: auto;
+        width: 95%;
+        height: 95%;
+    }
+    
+    .gif {
+        max-height: 260px;
+        max-width: 260px;
+        padding: auto; 
+        margin: auto;
+    }
+    
+    .gif-div {
+        float: left;
+        max-height: 280px;
+        max-width: 280px;
+        padding: auto;
+        margin: auto;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    #gifs-div {
+        padding: auto;
+        margin: auto;
+        width: 95%;
+        height: 95%;
+    }
+    
+    .gif {
+        max-height: 260px;
+        max-width: 260px;
+        padding: auto; 
+        margin: auto;
+    }
+    
+    .gif-div {
+        float: left;
+        max-height: 280px;
+        max-width: 280px;
+        padding: auto;
+        margin: auto;
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    #gifs-div {
+        padding: auto;
+        margin: auto;
+        width: 95%;
+        height: 95%;
+    }
+    
+    .gif {
+        max-height: 260px;
+        max-width: 260px;
+        padding: auto; 
+        margin: auto;
+    }
+    
+    .gif-div {
+        float: left;
+        max-height: 280px;
+        max-width: 280px;
+        padding: auto;
+        margin: auto;
+    }
+  }

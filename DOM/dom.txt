@@ -1,0 +1,21 @@
+DOM - Document Object Model
+It is a way to present an html page as a series of connected nodes
+JS allows us to manipulate the dom to create dynamic web pages
+
+event listeners
+- event is a user action or something that occurs on the page 
+click, mouseover, load
+- action, function or code to be called when an event has been triggered
+
+1. you need to grab an element, document.getElementById("exampleid");
+2. add the event listener element.addEventListener()
+
+parameters for event listener
+1st parameter is the event you are listening for 
+2nd parameter is the code or function to be executed when the code occurs
+3rd parameter whether or not the element should perform capturing or bubbling
+
+bubbling - when events execute from the innermost element to the outermost element. this is the 
+default for browsers
+
+capturing - executes the outermost elements first and then the inner element 
